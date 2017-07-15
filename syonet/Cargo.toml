@@ -4,5 +4,9 @@ version = "0.1.0"
 authors = ["Igarashi Syo <igara1119@gmail.com>"]
 
 [dependencies]
-rocket = "0.2.8"
-rocket_codegen = "0.2.8"
+iron = "0.5.*"
+router = "*"
+mount = "*"
+staticfile = "*"
+tera = "*"
+lazy_static = "*"
