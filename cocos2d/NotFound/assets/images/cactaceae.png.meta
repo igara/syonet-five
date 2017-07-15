@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "ec96b454-9d76-49a1-a334-51bf55e7ef54",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "cactaceae": {
+      "ver": "1.0.3",
+      "uuid": "5baa0cf7-f734-4011-a8e0-2356f703d544",
+      "rawTextureUuid": "ec96b454-9d76-49a1-a334-51bf55e7ef54",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 1,
+      "trimX": 15,
+      "trimY": 7,
+      "width": 98,
+      "height": 112,
+      "rawWidth": 128,
+      "rawHeight": 128,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

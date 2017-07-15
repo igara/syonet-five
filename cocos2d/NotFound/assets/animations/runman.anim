@@ -1,0 +1,38 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "runman",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 2.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b9fa5e97-9146-4d4e-8372-b31ea4f0b9dd"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "1686d43f-f845-4572-b441-3f8d91bc2b06"
+            }
+          },
+          {
+            "frame": 2,
+            "value": {
+              "__uuid__": "b9fa5e97-9146-4d4e-8372-b31ea4f0b9dd"
+            }
+          }
+        ]
+      }
+    },
+    "props": {}
+  },
+  "events": []
+}

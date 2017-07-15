@@ -1,17 +1,11 @@
 const {ccclass, property} = cc._decorator;
 
 /**
- * ページが存在しませんを表示しませんと表示されている箇所のComponent
+ * 全体の表示されている箇所のComponent
  * @extends {cc.Component}
  */
 @ccclass
-export default class NotFoundScript extends cc.Component {
-
-    /**
-     * Topページへ戻るボタン
-     */
-    @property(cc.Button)
-    top_link_button: cc.Button;
+export default class RootViewScript extends cc.Component {
 
     /**
      * lifecycle method
@@ -69,12 +63,5 @@ export default class NotFoundScript extends cc.Component {
      * @see {cc.Component.onDestroy}
      */
     onDestroy() {
-    }
-
-    /**
-     * Topページへ戻るボタンを押下したときの処理
-     */
-    onClickTopLinkButton() {
-        location.href = "/";
     }
 }
