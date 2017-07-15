@@ -5,7 +5,7 @@ https://syonet.work/
 ## Used
 
 - Rust 1.20.0 (9b85e1cfa 2017-07-07)
-- Riron 0.5.1
+- iron 0.5.1
 - VSCode
     - LLDB Debugger
     - Rusty Code
