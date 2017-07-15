@@ -64,6 +64,13 @@ export default class GameViewScript extends cc.Component {
     runMan: cc.Node;
 
     /**
+     * 点数
+     * @type {cc.Label} score
+     */
+    @property(cc.Label)
+    score: cc.Label
+
+    /**
      * lifecycle method
      * Nodeが有効になった時に呼び出されるメソッド
      * @see {cc.Component.onEnable}
@@ -94,8 +101,13 @@ export default class GameViewScript extends cc.Component {
      * @see {cc.Component.update}
      */
     update(dt) {
-        // サボテンを移動させる
-        this._moveCactaceae(dt);
+        if (GlobalVals.GameStatus === GlobalVals.GameStatusGroup.start) {
+            // サボテンを移動させる
+            this._moveCactaceae(dt);
+            // 点数のカウントを行う
+            GlobalVals.Score += 1;
+            this.score.string = GlobalVals.Score;
+        }
     }
 
     /**

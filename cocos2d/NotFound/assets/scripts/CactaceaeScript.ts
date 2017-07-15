@@ -1,18 +1,16 @@
 const {ccclass, property} = cc._decorator;
 
+// 衝突を扱う
+const manager = cc.director.getCollisionManager();
+// デフォルトfalseになっているのをtrueにして衝突検知をOnにする
+manager.enabled = true;
+
 /**
- * ページが存在しませんを表示されている箇所のComponent
+ * サボテンのComponent
  * @extends {cc.Component}
  */
 @ccclass
-export default class NotFoundViewScript extends cc.Component {
-
-    /**
-     * Topページへ戻るボタン
-     * @type {cc.Button} top_link_button
-     */
-    @property(cc.Button)
-    top_link_button: cc.Button;
+export default class CactaceaeScript extends cc.Component {
 
     /**
      * lifecycle method
@@ -73,16 +71,28 @@ export default class NotFoundViewScript extends cc.Component {
     }
 
     /**
-     * Topページへ戻るボタンを押下したときの処理
+     * 衝突開始した時に呼び出されるメソッド
+     * @param {{}} other 衝突したNode
+     * @param {{}} self 自身のNode
      */
-    onClickTopLinkButton() {
-        location.href = "/";
+    onCollisionEnter(other, self) {
+        GlobalVals.GameStatus = GlobalVals.GameStatusGroup.dead;
     }
 
     /**
-     * ゲームを開始するボタンを押下したときの処理
+     * 衝突中に呼び出されるメソッド
+     * @param {{}} other 衝突したNode
+     * @param {{}} self 自身のNode
      */
-    onClickPlayStsrtButton() {
-        GlobalVals.GameStatus = GlobalVals.GameStatusGroup.start;
+    onCollisionStay(other, self) {
+    }
+
+    /**
+     * 衝突が解除される時に呼び出されるメソッド
+     * @param {{}} other 衝突したNode
+     * @param {{}} self 自身のNode
+     */
+    onCollisionExit(other, self) {
+        GlobalVals.Score = 0;
     }
 }
