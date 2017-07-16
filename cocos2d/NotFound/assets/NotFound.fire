@@ -1309,7 +1309,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
@@ -1381,7 +1381,7 @@
     "target": {
       "__id__": 26
     },
-    "component": "NotFoundScript",
+    "component": "NotFoundViewScript",
     "handler": "onClickTopLinkButton",
     "customEventData": ""
   },
