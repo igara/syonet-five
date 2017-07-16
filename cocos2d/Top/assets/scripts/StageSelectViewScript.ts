@@ -1,18 +1,18 @@
 const {ccclass, property} = cc._decorator;
 
 /**
- * ページが存在しませんを表示されている箇所のComponent
+ * ゲーム選択表示されている箇所のComponent
  * @extends {cc.Component}
  */
 @ccclass
-export default class NotFoundViewScript extends cc.Component {
+export default class StageSelectViewScript extends cc.Component {
 
     /**
-     * Topページへ戻るボタン
-     * @type {cc.Button} top_link_button
+     * ￥ボタン
+     * @type {cc.Button} yenButton
      */
     @property(cc.Button)
-    top_link_button: cc.Button;
+    yenButton: cc.Button;
 
     /**
      * lifecycle method
@@ -73,16 +73,9 @@ export default class NotFoundViewScript extends cc.Component {
     }
 
     /**
-     * Topページへ戻るボタンを押下したときの処理
+     * ￥ボタンを押下したときの処理
      */
-    onClickTopLinkButton() {
-        location.href = "/";
-    }
-
-    /**
-     * ゲームを開始するボタンを押下したときの処理
-     */
-    onClickPlayStarttButton() {
-        GlobalVals.GameStatus = GlobalVals.GameStatusGroup.start;
+    onClickYenButton() {
+        location.href = "/game/yen/";
     }
 }

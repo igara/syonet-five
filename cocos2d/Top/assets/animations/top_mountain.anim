@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "top_mountain",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.9666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b02cc51e-5f38-44a1-a280-9004be8c3e71"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "a4acdd2f-1889-41cc-8b29-757b1de6d554"
+            }
+          },
+          {
+            "frame": 1.95,
+            "value": {
+              "__uuid__": "b02cc51e-5f38-44a1-a280-9004be8c3e71"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

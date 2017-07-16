@@ -1612,7 +1612,7 @@
       "__id__": 26
     },
     "component": "NotFoundViewScript",
-    "handler": "onClickPlayStsrtButton",
+    "handler": "onClickPlayStarttButton",
     "customEventData": ""
   },
   {
