@@ -57,6 +57,13 @@ export default class GameViewScript extends cc.Component {
     jumpTime: Number = 0;
 
     /**
+     * ジャンプ音
+     * @type {cc.AudioClip} jumpSe
+     */
+    @property(cc.AudioClip)
+    jumpSe: cc.AudioClip;
+
+    /**
      * 棒人間
      * @type {cc.Node} runMan
      */
@@ -163,6 +170,11 @@ export default class GameViewScript extends cc.Component {
      * ジャンプボタンを押下したときの処理
      */
     onClickJumpButton() {
+        // ジャンプ音の再生
+        const se = new cc.AudioSource();
+        se.clip = this.jumpSe;
+        se.play();
+
         this.runMan.y += this.jumpHeight;
         setTimeout(() => {
             // 数秒後に着地する

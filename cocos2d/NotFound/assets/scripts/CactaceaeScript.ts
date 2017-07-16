@@ -13,6 +13,14 @@ manager.enabled = true;
 export default class CactaceaeScript extends cc.Component {
 
     /**
+     * ぶつかったときの音
+     * @type {cc.AudioClip} collisionSe
+     */
+    @property(cc.AudioClip)
+    collisionSe: cc.AudioClip;
+
+
+    /**
      * lifecycle method
      * Nodeが有効になった時に呼び出されるメソッド
      * @see {cc.Component.onEnable}
@@ -76,6 +84,11 @@ export default class CactaceaeScript extends cc.Component {
      * @param {{}} self 自身のNode
      */
     onCollisionEnter(other, self) {
+        // ぶつかり音の再生
+        const se = new cc.AudioSource();
+        se.clip = this.collisionSe;
+        se.play();
+
         GlobalVals.GameStatus = GlobalVals.GameStatusGroup.dead;
     }
 

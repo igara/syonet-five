@@ -485,7 +485,10 @@
     "node": {
       "__id__": 9
     },
-    "_enabled": true
+    "_enabled": true,
+    "collisionSe": {
+      "__uuid__": "07c2f2ac-1d02-4b58-aa79-0f255c500550"
+    }
   },
   {
     "__type__": "cc.BoxCollider",
@@ -935,6 +938,9 @@
     },
     "jumpHeight": 110,
     "jumpTime": 1000,
+    "jumpSe": {
+      "__uuid__": "0a8f41cc-0057-484d-b9ea-d80c9f292211"
+    },
     "runMan": {
       "__id__": 13
     },
