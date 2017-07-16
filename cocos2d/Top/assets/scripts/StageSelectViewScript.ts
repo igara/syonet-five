@@ -78,4 +78,11 @@ export default class StageSelectViewScript extends cc.Component {
     onClickYenButton() {
         location.href = "/game/yen/";
     }
+
+    /**
+     * ○ボタンを押下したときの処理
+     */
+    onClickBallButton() {
+        location.href = "/game/ball/";
+    }
 }

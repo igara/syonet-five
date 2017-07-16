@@ -57,6 +57,8 @@ fn main() {
     mount.mount("/", Static::new(Path::new("../cocos2d/Top/build/web-mobile")));
     // Yenゲームの読み込み
     mount.mount("/game/yen/", Static::new(Path::new("../cocos2d/Yen/build/web-mobile")));
+    // Ballゲームの読み込み
+    mount.mount("/game/ball/", Static::new(Path::new("../cocos2d/Ball/build/web-mobile")));
     // 存在しないページの読み込み
     mount.mount("/notfound/", Static::new(Path::new("../cocos2d/NotFound/build/web-mobile")));
     mount.mount("/*", router);
