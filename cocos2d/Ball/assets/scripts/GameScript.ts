@@ -116,18 +116,35 @@ export default class GameScript extends cc.Component {
     }
 
     /**
+     * 経過時間
+     * @type {Number} time
+     */
+    time: Number = 0;
+
+    /**
+     * 保存時間
+     * @type {Number} tmpTime
+     */
+    tmpTime: Number = 0;
+
+    /**
      * lifecycle method
      * フレームをレンダリングを行う度に呼び出しされるメソッド
      * @param {float} dt 経過時間
      * @see {cc.Component.update}
      */
     update(dt) {
-		// ボールを生成
-        const ball = cc.instantiate(this.random(this.balls, 1));
-        ball.x = 0;
-        ball.y = 0;
-        // 新しく追加したノードを親ノードの下に置く
-        this.outballs.addChild(ball);
+        this.time += dt;
+        // 1秒でも異なっていたら玉を出すように
+        if (parseInt(this.time) !== parseInt(this.tmpTime)) {
+            this.tmpTime = this.time;
+    		// ボールを生成
+            const ball = cc.instantiate(this.random(this.balls, 1));
+            ball.x = 0;
+            ball.y = 0;
+            // 新しく追加したノードを親ノードの下に置く
+            this.outballs.addChild(ball);
+        }
     }
 
     /**
